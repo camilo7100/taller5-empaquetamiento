@@ -1,0 +1,13 @@
+# Archivos que se generan al entrenar, probar y empaquetar (no se suben al repositorio)
+__pycache__/
+*.py[co]
+.tox/
+dist/
+*.egg-info/
+build/
+env*/
+.venv/
+# modelo entrenado: se regenera con "tox run -e train"
+package-src/model/trained/*.pkl
+# el paquete .whl se baja por scp a la carpeta test para la captura, pero no se versiona
+test/*.whl
